@@ -1,0 +1,950 @@
+{
+  "generated_at": "2026-06-03T11:59:16+00:00",
+  "source": {
+    "unclaimed_prizes": "https://www.mainelottery.com/players_info/unclaimed_prizes.html",
+    "instant_index": "https://www.mainelottery.com/instant/index.html"
+  },
+  "counts": {
+    "in_unclaimed_table": 61,
+    "matched_with_printed": 27
+  },
+  "games": [
+    {
+      "game_number": 718,
+      "name": "$70 MILLION SUPREME",
+      "price": 30,
+      "percent_unsold": 78.8,
+      "total_unclaimed": 62866950,
+      "tickets_printed": 3100000,
+      "tickets_remaining": 2442800,
+      "max_award": 1000000,
+      "overall_odds": 2.98,
+      "on_sale": "February 17, 2026",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13343840&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13343840&v=article",
+      "prizes": [
+        {
+          "prize": 1000000,
+          "remaining": 4,
+          "odds_one_in": 610700
+        },
+        {
+          "prize": 100000,
+          "remaining": 5,
+          "odds_one_in": 488560
+        },
+        {
+          "prize": 50000,
+          "remaining": 6,
+          "odds_one_in": 407133
+        },
+        {
+          "prize": 10000,
+          "remaining": 14,
+          "odds_one_in": 174486
+        },
+        {
+          "prize": 5000,
+          "remaining": 57,
+          "odds_one_in": 42856
+        },
+        {
+          "prize": 1000,
+          "remaining": 1438,
+          "odds_one_in": 1699
+        },
+        {
+          "prize": 500,
+          "remaining": 6834,
+          "odds_one_in": 357
+        }
+      ]
+    },
+    {
+      "game_number": 630,
+      "name": "$500,000 ROYAL CASH",
+      "price": 20,
+      "percent_unsold": 16.3,
+      "total_unclaimed": 3476320,
+      "tickets_printed": 960000,
+      "tickets_remaining": 156480,
+      "max_award": 500000,
+      "overall_odds": 2.84,
+      "on_sale": "October 3, 2024",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13082241&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13082241&v=article",
+      "prizes": [
+        {
+          "prize": 500000,
+          "remaining": 2,
+          "odds_one_in": 78240
+        },
+        {
+          "prize": 10000,
+          "remaining": 3,
+          "odds_one_in": 52160
+        },
+        {
+          "prize": 5000,
+          "remaining": 13,
+          "odds_one_in": 12037
+        },
+        {
+          "prize": 1000,
+          "remaining": 135,
+          "odds_one_in": 1159
+        },
+        {
+          "prize": 500,
+          "remaining": 410,
+          "odds_one_in": 382
+        }
+      ]
+    },
+    {
+      "game_number": 661,
+      "name": "$50,000 BANKROLL",
+      "price": 20,
+      "percent_unsold": 6.0,
+      "total_unclaimed": 1441410,
+      "tickets_printed": 720000,
+      "tickets_remaining": 43200,
+      "max_award": 50000,
+      "overall_odds": 2.81,
+      "on_sale": "December 5, 2024",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13133039&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13133039&v=article",
+      "prizes": [
+        {
+          "prize": 50000,
+          "remaining": 3,
+          "odds_one_in": 14400
+        },
+        {
+          "prize": 10000,
+          "remaining": 1,
+          "odds_one_in": 43200
+        },
+        {
+          "prize": 5000,
+          "remaining": 5,
+          "odds_one_in": 8640
+        },
+        {
+          "prize": 1000,
+          "remaining": 86,
+          "odds_one_in": 502
+        },
+        {
+          "prize": 500,
+          "remaining": 198,
+          "odds_one_in": 218
+        }
+      ]
+    },
+    {
+      "game_number": 667,
+      "name": "CASH BONANZA",
+      "price": 20,
+      "percent_unsold": 22.2,
+      "total_unclaimed": 3462920,
+      "tickets_printed": 960000,
+      "tickets_remaining": 213120,
+      "max_award": 500000,
+      "overall_odds": 2.89,
+      "on_sale": "January 9, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13142187&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13142187&v=article",
+      "prizes": [
+        {
+          "prize": 50000,
+          "remaining": 1,
+          "odds_one_in": 213120
+        },
+        {
+          "prize": 20000,
+          "remaining": 6,
+          "odds_one_in": 35520
+        },
+        {
+          "prize": 10000,
+          "remaining": 3,
+          "odds_one_in": 71040
+        },
+        {
+          "prize": 5000,
+          "remaining": 20,
+          "odds_one_in": 10656
+        },
+        {
+          "prize": 1000,
+          "remaining": 296,
+          "odds_one_in": 720
+        },
+        {
+          "prize": 500,
+          "remaining": 519,
+          "odds_one_in": 411
+        }
+      ]
+    },
+    {
+      "game_number": 674,
+      "name": "CASH TIMES 10",
+      "price": 10,
+      "percent_unsold": 17.1,
+      "total_unclaimed": 2110815,
+      "tickets_printed": 1200000,
+      "tickets_remaining": 205200,
+      "max_award": 250000,
+      "overall_odds": 3.39,
+      "on_sale": "March 6, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13150867&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13150867&v=article",
+      "prizes": [
+        {
+          "prize": 250000,
+          "remaining": 1,
+          "odds_one_in": 205200
+        },
+        {
+          "prize": 25000,
+          "remaining": 2,
+          "odds_one_in": 102600
+        },
+        {
+          "prize": 10000,
+          "remaining": 2,
+          "odds_one_in": 102600
+        },
+        {
+          "prize": 5000,
+          "remaining": 6,
+          "odds_one_in": 34200
+        },
+        {
+          "prize": 1000,
+          "remaining": 52,
+          "odds_one_in": 3946
+        },
+        {
+          "prize": 500,
+          "remaining": 172,
+          "odds_one_in": 1193
+        }
+      ]
+    },
+    {
+      "game_number": 677,
+      "name": "BLAZING BUCKS",
+      "price": 10,
+      "percent_unsold": 32.4,
+      "total_unclaimed": 3692115,
+      "tickets_printed": 1320000,
+      "tickets_remaining": 427680,
+      "max_award": 250000,
+      "overall_odds": 3.41,
+      "on_sale": "September 4, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13263306&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13263306&v=article",
+      "prizes": [
+        {
+          "prize": 250000,
+          "remaining": 1,
+          "odds_one_in": 427680
+        },
+        {
+          "prize": 10000,
+          "remaining": 3,
+          "odds_one_in": 142560
+        },
+        {
+          "prize": 5000,
+          "remaining": 8,
+          "odds_one_in": 53460
+        },
+        {
+          "prize": 1000,
+          "remaining": 214,
+          "odds_one_in": 1999
+        },
+        {
+          "prize": 500,
+          "remaining": 679,
+          "odds_one_in": 630
+        }
+      ]
+    },
+    {
+      "game_number": 686,
+      "name": "25X THE WIN",
+      "price": 10,
+      "percent_unsold": 54.6,
+      "total_unclaimed": 6645120,
+      "tickets_printed": 1440000,
+      "tickets_remaining": 786240,
+      "max_award": 250000,
+      "overall_odds": 3.36,
+      "on_sale": "November 6, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13331225&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13331225&v=article",
+      "prizes": [
+        {
+          "prize": 250000,
+          "remaining": 2,
+          "odds_one_in": 393120
+        },
+        {
+          "prize": 10000,
+          "remaining": 2,
+          "odds_one_in": 393120
+        },
+        {
+          "prize": 5000,
+          "remaining": 11,
+          "odds_one_in": 71476
+        },
+        {
+          "prize": 1000,
+          "remaining": 245,
+          "odds_one_in": 3209
+        },
+        {
+          "prize": 500,
+          "remaining": 254,
+          "odds_one_in": 3095
+        }
+      ]
+    },
+    {
+      "game_number": 693,
+      "name": "JURASSIC PARK",
+      "price": 10,
+      "percent_unsold": 31.6,
+      "total_unclaimed": 6692175,
+      "tickets_printed": 1200000,
+      "tickets_remaining": 379200,
+      "max_award": 250000,
+      "overall_odds": 3.36,
+      "on_sale": "July 17, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13234361&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13234361&v=article",
+      "prizes": [
+        {
+          "prize": 250000,
+          "remaining": 3,
+          "odds_one_in": 126400
+        },
+        {
+          "prize": 25000,
+          "remaining": 4,
+          "odds_one_in": 94800
+        },
+        {
+          "prize": 10000,
+          "remaining": 9,
+          "odds_one_in": 42133
+        },
+        {
+          "prize": 5000,
+          "remaining": 9,
+          "odds_one_in": 42133
+        },
+        {
+          "prize": 1000,
+          "remaining": 164,
+          "odds_one_in": 2312
+        },
+        {
+          "prize": 500,
+          "remaining": 617,
+          "odds_one_in": 615
+        }
+      ]
+    },
+    {
+      "game_number": 711,
+      "name": "HAMILTON",
+      "price": 10,
+      "percent_unsold": 44.7,
+      "total_unclaimed": 4786080,
+      "tickets_printed": 1200000,
+      "tickets_remaining": 536400,
+      "max_award": 250000,
+      "overall_odds": 3.39,
+      "on_sale": "January 8, 2026",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13338795&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13338795&v=article",
+      "prizes": [
+        {
+          "prize": 250000,
+          "remaining": 2,
+          "odds_one_in": 268200
+        },
+        {
+          "prize": 25000,
+          "remaining": 2,
+          "odds_one_in": 268200
+        },
+        {
+          "prize": 10000,
+          "remaining": 4,
+          "odds_one_in": 134100
+        },
+        {
+          "prize": 2500,
+          "remaining": 11,
+          "odds_one_in": 48764
+        },
+        {
+          "prize": 1000,
+          "remaining": 132,
+          "odds_one_in": 4064
+        },
+        {
+          "prize": 500,
+          "remaining": 482,
+          "odds_one_in": 1113
+        }
+      ]
+    },
+    {
+      "game_number": 656,
+      "name": "POWER SPOT",
+      "price": 5,
+      "percent_unsold": 30.2,
+      "total_unclaimed": 1629160,
+      "tickets_printed": 1320000,
+      "tickets_remaining": 398640,
+      "max_award": 100000,
+      "overall_odds": 3.82,
+      "on_sale": "July 3, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13221295&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13221295&v=article",
+      "prizes": [
+        {
+          "prize": 100000,
+          "remaining": 1,
+          "odds_one_in": 398640
+        },
+        {
+          "prize": 20000,
+          "remaining": 3,
+          "odds_one_in": 132880
+        },
+        {
+          "prize": 5000,
+          "remaining": 2,
+          "odds_one_in": 199320
+        },
+        {
+          "prize": 1000,
+          "remaining": 23,
+          "odds_one_in": 17332
+        }
+      ]
+    },
+    {
+      "game_number": 683,
+      "name": "LADY LUCK",
+      "price": 5,
+      "percent_unsold": 3.0,
+      "total_unclaimed": 494980,
+      "tickets_printed": 1200000,
+      "tickets_remaining": 36000,
+      "max_award": 100000,
+      "overall_odds": 3.78,
+      "on_sale": "May 1, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13179076&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13179076&v=article",
+      "prizes": [
+        {
+          "prize": 100000,
+          "remaining": 1,
+          "odds_one_in": 36000
+        },
+        {
+          "prize": 1000,
+          "remaining": 5,
+          "odds_one_in": 7200
+        }
+      ]
+    },
+    {
+      "game_number": 685,
+      "name": "20X THE WIN",
+      "price": 5,
+      "percent_unsold": 21.1,
+      "total_unclaimed": 1575905,
+      "tickets_printed": 1560000,
+      "tickets_remaining": 329160,
+      "max_award": 100000,
+      "overall_odds": 3.87,
+      "on_sale": "August 7, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13245739&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13245739&v=article",
+      "prizes": [
+        {
+          "prize": 100000,
+          "remaining": 2,
+          "odds_one_in": 164580
+        },
+        {
+          "prize": 5000,
+          "remaining": 9,
+          "odds_one_in": 36573
+        },
+        {
+          "prize": 1000,
+          "remaining": 34,
+          "odds_one_in": 9681
+        }
+      ]
+    },
+    {
+      "game_number": 692,
+      "name": "MONEY VAULT MULTIPLIER",
+      "price": 5,
+      "percent_unsold": 49.9,
+      "total_unclaimed": 2765850,
+      "tickets_printed": 1320000,
+      "tickets_remaining": 658680,
+      "max_award": 100000,
+      "overall_odds": 3.79,
+      "on_sale": "February 5, 2026",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13342572&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13342572&v=article",
+      "prizes": [
+        {
+          "prize": 100000,
+          "remaining": 2,
+          "odds_one_in": 329340
+        },
+        {
+          "prize": 10000,
+          "remaining": 10,
+          "odds_one_in": 65868
+        },
+        {
+          "prize": 1000,
+          "remaining": 36,
+          "odds_one_in": 18297
+        },
+        {
+          "prize": 500,
+          "remaining": 159,
+          "odds_one_in": 4143
+        }
+      ]
+    },
+    {
+      "game_number": 704,
+      "name": "SILVER 7S",
+      "price": 5,
+      "percent_unsold": 16.7,
+      "total_unclaimed": 1088992,
+      "tickets_printed": 1200000,
+      "tickets_remaining": 200400,
+      "max_award": 77777,
+      "overall_odds": 3.79,
+      "on_sale": "November 6, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13331223&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13331223&v=article",
+      "prizes": [
+        {
+          "prize": 77777,
+          "remaining": 1,
+          "odds_one_in": 200400
+        },
+        {
+          "prize": 10000,
+          "remaining": 2,
+          "odds_one_in": 100200
+        },
+        {
+          "prize": 1000,
+          "remaining": 8,
+          "odds_one_in": 25050
+        }
+      ]
+    },
+    {
+      "game_number": 706,
+      "name": "DOUBLE YOUR DOLLARS",
+      "price": 5,
+      "percent_unsold": 10.3,
+      "total_unclaimed": 772155,
+      "tickets_printed": 960000,
+      "tickets_remaining": 98880,
+      "max_award": 100000,
+      "overall_odds": 3.83,
+      "on_sale": "December 4, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13336199&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13336199&v=article",
+      "prizes": [
+        {
+          "prize": 100000,
+          "remaining": 1,
+          "odds_one_in": 98880
+        },
+        {
+          "prize": 10000,
+          "remaining": 1,
+          "odds_one_in": 98880
+        },
+        {
+          "prize": 1000,
+          "remaining": 2,
+          "odds_one_in": 49440
+        }
+      ]
+    },
+    {
+      "game_number": 707,
+      "name": "$60,000 CASHWORD",
+      "price": 5,
+      "percent_unsold": 12.5,
+      "total_unclaimed": 1371765,
+      "tickets_printed": 1560000,
+      "tickets_remaining": 195000,
+      "max_award": 60000,
+      "overall_odds": 3.52,
+      "on_sale": "December 4, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13336200&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13336200&v=article",
+      "prizes": [
+        {
+          "prize": 60000,
+          "remaining": 1,
+          "odds_one_in": 195000
+        },
+        {
+          "prize": 10000,
+          "remaining": 3,
+          "odds_one_in": 65000
+        },
+        {
+          "prize": 1000,
+          "remaining": 18,
+          "odds_one_in": 10833
+        },
+        {
+          "prize": 500,
+          "remaining": 67,
+          "odds_one_in": 2910
+        }
+      ]
+    },
+    {
+      "game_number": 709,
+      "name": "CA$H BLA$T",
+      "price": 5,
+      "percent_unsold": 33.1,
+      "total_unclaimed": 1453260,
+      "tickets_printed": 960000,
+      "tickets_remaining": 317760,
+      "max_award": 100000,
+      "overall_odds": 3.87,
+      "on_sale": "January 8, 2026",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13338794&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13338794&v=article",
+      "prizes": [
+        {
+          "prize": 100000,
+          "remaining": 1,
+          "odds_one_in": 317760
+        },
+        {
+          "prize": 20000,
+          "remaining": 2,
+          "odds_one_in": 158880
+        },
+        {
+          "prize": 1000,
+          "remaining": 3,
+          "odds_one_in": 105920
+        },
+        {
+          "prize": 500,
+          "remaining": 20,
+          "odds_one_in": 15888
+        }
+      ]
+    },
+    {
+      "game_number": 717,
+      "name": "HI OR LO",
+      "price": 5,
+      "percent_unsold": 53.5,
+      "total_unclaimed": 2242330,
+      "tickets_printed": 960000,
+      "tickets_remaining": 513600,
+      "max_award": 100000,
+      "overall_odds": 3.87,
+      "on_sale": "April 2, 2026",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13345467&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13345467&v=article",
+      "prizes": [
+        {
+          "prize": 100000,
+          "remaining": 2,
+          "odds_one_in": 256800
+        },
+        {
+          "prize": 10000,
+          "remaining": 4,
+          "odds_one_in": 128400
+        },
+        {
+          "prize": 1000,
+          "remaining": 68,
+          "odds_one_in": 7553
+        }
+      ]
+    },
+    {
+      "game_number": 723,
+      "name": "RED HOT RICHES",
+      "price": 5,
+      "percent_unsold": 62.8,
+      "total_unclaimed": 2703615,
+      "tickets_printed": 960000,
+      "tickets_remaining": 602880,
+      "max_award": 100000,
+      "overall_odds": 3.87,
+      "on_sale": "May 7, 2026",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13348220&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13348220&v=article",
+      "prizes": [
+        {
+          "prize": 100000,
+          "remaining": 3,
+          "odds_one_in": 200960
+        },
+        {
+          "prize": 10000,
+          "remaining": 5,
+          "odds_one_in": 120576
+        },
+        {
+          "prize": 1000,
+          "remaining": 86,
+          "odds_one_in": 7010
+        }
+      ]
+    },
+    {
+      "game_number": 695,
+      "name": "CASH LINE BINGO",
+      "price": 3,
+      "percent_unsold": 16.9,
+      "total_unclaimed": 663358,
+      "tickets_printed": 960000,
+      "tickets_remaining": 162240,
+      "max_award": 30000,
+      "overall_odds": 3.4,
+      "on_sale": "July 3, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13221300&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13221300&v=article",
+      "prizes": [
+        {
+          "prize": 30000,
+          "remaining": 1,
+          "odds_one_in": 162240
+        },
+        {
+          "prize": 1500,
+          "remaining": 3,
+          "odds_one_in": 54080
+        }
+      ]
+    },
+    {
+      "game_number": 696,
+      "name": "SKEE-BALL",
+      "price": 3,
+      "percent_unsold": 12.2,
+      "total_unclaimed": 587032,
+      "tickets_printed": 1200000,
+      "tickets_remaining": 146400,
+      "max_award": 30000,
+      "overall_odds": 3.43,
+      "on_sale": "August 7, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13245736&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13245736&v=article",
+      "prizes": [
+        {
+          "prize": 30000,
+          "remaining": 1,
+          "odds_one_in": 146400
+        },
+        {
+          "prize": 1000,
+          "remaining": 2,
+          "odds_one_in": 73200
+        },
+        {
+          "prize": 500,
+          "remaining": 5,
+          "odds_one_in": 29280
+        }
+      ]
+    },
+    {
+      "game_number": 699,
+      "name": "LEAP FOR LOOT",
+      "price": 3,
+      "percent_unsold": 31.3,
+      "total_unclaimed": 1066605,
+      "tickets_printed": 1200000,
+      "tickets_remaining": 375600,
+      "max_award": 30000,
+      "overall_odds": 3.37,
+      "on_sale": "November 6, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13331224&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13331224&v=article",
+      "prizes": [
+        {
+          "prize": 30000,
+          "remaining": 1,
+          "odds_one_in": 375600
+        },
+        {
+          "prize": 1000,
+          "remaining": 4,
+          "odds_one_in": 93900
+        },
+        {
+          "prize": 500,
+          "remaining": 7,
+          "odds_one_in": 53657
+        }
+      ]
+    },
+    {
+      "game_number": 662,
+      "name": "COUNT `EM UP",
+      "price": 2,
+      "percent_unsold": 16.0,
+      "total_unclaimed": 385077,
+      "tickets_printed": 960000,
+      "tickets_remaining": 153600,
+      "max_award": 15000,
+      "overall_odds": 4.19,
+      "on_sale": "January 9, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13142181&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13142181&v=article",
+      "prizes": [
+        {
+          "prize": 15000,
+          "remaining": 2,
+          "odds_one_in": 76800
+        },
+        {
+          "prize": 1000,
+          "remaining": 5,
+          "odds_one_in": 30720
+        }
+      ]
+    },
+    {
+      "game_number": 687,
+      "name": "10X THE WIN",
+      "price": 2,
+      "percent_unsold": 27.9,
+      "total_unclaimed": 836724,
+      "tickets_printed": 1560000,
+      "tickets_remaining": 435240,
+      "max_award": 20000,
+      "overall_odds": 4.31,
+      "on_sale": "August 7, 2025",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13245737&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13245737&v=article",
+      "prizes": [
+        {
+          "prize": 20000,
+          "remaining": 3,
+          "odds_one_in": 145080
+        },
+        {
+          "prize": 1000,
+          "remaining": 13,
+          "odds_one_in": 33480
+        }
+      ]
+    },
+    {
+      "game_number": 705,
+      "name": "ALL THE MONEY",
+      "price": 2,
+      "percent_unsold": 64.7,
+      "total_unclaimed": 994307,
+      "tickets_printed": 840000,
+      "tickets_remaining": 543480,
+      "max_award": 10000,
+      "overall_odds": 4.17,
+      "on_sale": "May 7, 2026",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13348222&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13348222&v=article",
+      "prizes": [
+        {
+          "prize": 10000,
+          "remaining": 5,
+          "odds_one_in": 108696
+        },
+        {
+          "prize": 1000,
+          "remaining": 24,
+          "odds_one_in": 22645
+        }
+      ]
+    },
+    {
+      "game_number": 708,
+      "name": "ELECTRIC 8`S",
+      "price": 2,
+      "percent_unsold": 44.6,
+      "total_unclaimed": 763294,
+      "tickets_printed": 840000,
+      "tickets_remaining": 374640,
+      "max_award": 8888,
+      "overall_odds": 4.22,
+      "on_sale": "April 2, 2026",
+      "image_url": "https://www.maine.gov/tools/whatsnew/attach.php?id=13345468&an=1",
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13345468&v=article",
+      "prizes": [
+        {
+          "prize": 8888,
+          "remaining": 2,
+          "odds_one_in": 187320
+        },
+        {
+          "prize": 1000,
+          "remaining": 4,
+          "odds_one_in": 93660
+        }
+      ]
+    },
+    {
+      "game_number": 694,
+      "name": "CA$H IN",
+      "price": 1,
+      "percent_unsold": 23.8,
+      "total_unclaimed": 334465,
+      "tickets_printed": 960000,
+      "tickets_remaining": 228480,
+      "max_award": 1000,
+      "overall_odds": 4.66,
+      "on_sale": "February 5, 2026",
+      "image_url": null,
+      "article_url": "https://www.maine.gov/tools/whatsnew/index.php?topic=Lottery_Scratch&id=13342571&v=article",
+      "prizes": [
+        {
+          "prize": 1000,
+          "remaining": 6,
+          "odds_one_in": 38080
+        }
+      ]
+    }
+  ]
+}

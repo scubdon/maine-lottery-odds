@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>The Real Odds — Maine Scratch Tickets</title>
+  <meta name="description" content="The actual odds of winning a top prize on Maine State Lottery scratch tickets, calculated from prizes still unclaimed and tickets still unsold." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="masthead">
+    <div class="wrap">
+      <p class="kicker">An independent look at the Maine State Lottery</p>
+      <h1>What are your <em>real</em> odds?</h1>
+      <p class="standfirst">
+        The lottery prints the overall odds of winning <em>anything</em> — usually a free ticket or
+        a couple of dollars back. It does not tell you the odds of winning a prize that's actually
+        worth more than the ticket. So we worked them out, using the prizes still unclaimed and the
+        tickets still unsold for every current scratch game.
+      </p>
+      <p class="updated" id="updated"></p>
+    </div>
+  </header>
+
+  <section class="takeaways wrap" id="takeaways" hidden>
+    <div class="stat">
+      <span class="stat-num" id="stat-games">—</span>
+      <span class="stat-label">current games analyzed</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="stat-longest">—</span>
+      <span class="stat-label" id="stat-longest-label">longest odds for a top prize</span>
+    </div>
+    <div class="stat">
+      <span class="stat-num" id="stat-best">—</span>
+      <span class="stat-label" id="stat-best-label">shortest odds for any top prize</span>
+    </div>
+  </section>
+
+  <section class="landscape wrap" id="landscape" hidden>
+    <h2>The odds landscape</h2>
+    <p class="section-note">
+      Every dot is one game's <strong>top prize</strong>, placed by how long the odds are of winning it
+      on a single ticket. The scale is logarithmic — each step to the right is <em>ten times</em> less
+      likely. Hover or tap a dot for the game.
+    </p>
+    <div id="chart"></div>
+    <div class="legend" id="chart-legend"></div>
+  </section>
+
+  <section class="controls wrap" id="controls" hidden>
+    <div class="control">
+      <label>Price</label>
+      <div class="chips" id="price-chips"></div>
+    </div>
+    <div class="control grow">
+      <label for="search">Search</label>
+      <input id="search" type="search" placeholder="Game name or number…" autocomplete="off" />
+    </div>
+    <div class="control">
+      <label for="sort">Sort by</label>
+      <select id="sort">
+        <option value="odds-desc">Longest top-prize odds</option>
+        <option value="odds-asc">Shortest top-prize odds</option>
+        <option value="price-desc">Price: high to low</option>
+        <option value="price-asc">Price: low to high</option>
+        <option value="unsold-desc">Most tickets left</option>
+      </select>
+    </div>
+  </section>
+
+  <main class="wrap">
+    <p id="status" class="status">Loading current lottery data…</p>
+    <div id="cards" class="cards"></div>
+  </main>
+
+  <footer class="colophon">
+    <div class="wrap">
+      <h2>How this is calculated</h2>
+      <p>
+        For each game we take the <strong>total number of tickets printed</strong> (from the game's own
+        page on the lottery site) and multiply by the <strong>percent of tickets still unsold</strong>
+        (from the lottery's unclaimed-prizes table) to estimate how many tickets are still out there to buy.
+        For every top prize level, we divide those remaining tickets by the number of that prize still
+        unclaimed:
+      </p>
+      <p class="formula">
+        odds of winning&nbsp;=&nbsp;(tickets&nbsp;printed × percent&nbsp;unsold)&nbsp;÷&nbsp;prizes&nbsp;still&nbsp;unclaimed
+      </p>
+      <p class="caveat">
+        These are estimates and assume the unsold tickets are distributed like the rest of the pool — which
+        the lottery does not guarantee. "Unclaimed" prizes may already be sitting in someone's drawer.
+        Games whose individual page has been taken down by the lottery can't be matched and are not shown.
+        This site is not affiliated with or endorsed by the Maine State Lottery. Data:
+        <a id="src-unclaimed" href="#">unclaimed prizes table</a> ·
+        <a id="src-index" href="#">instant game index</a>.
+      </p>
+    </div>
+  </footer>
+
+  <template id="card-tpl">
+    <article class="card">
+      <div class="card-img">
+        <img loading="lazy" alt="" />
+        <span class="price-badge"></span>
+      </div>
+      <div class="card-body">
+        <header class="card-head">
+          <h3 class="card-name"></h3>
+          <span class="card-no"></span>
+        </header>
+        <dl class="card-meta">
+          <div><dt>Tickets left</dt><dd class="m-left"></dd></div>
+          <div><dt>Percent unsold</dt><dd class="m-unsold"></dd></div>
+          <div><dt>Overall odds*</dt><dd class="m-overall"></dd></div>
+        </dl>
+        <table class="prizes">
+          <thead><tr><th>Top prize</th><th># left</th><th>Your odds per ticket</th></tr></thead>
+          <tbody></tbody>
+        </table>
+        <a class="card-link" target="_blank" rel="noopener">View official game page →</a>
+      </div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
