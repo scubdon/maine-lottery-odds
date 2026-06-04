@@ -32,14 +32,19 @@ The odds shown are then:
 odds of winning a prize = (tickets printed × percent unsold) ÷ that prize still unclaimed
 ```
 
-Games whose individual page the lottery has taken down can't be matched to a printed
-count, so they're omitted (the site notes how many were dropped).
+When the lottery takes down a game's individual page, its printed count is instead read
+from an **archived copy of that page on the [Wayback Machine](https://web.archive.org/)**
+(the printed count never changes, so an old snapshot stays valid while the live unsold-%
+keeps updating). Those games are marked "archived" on the site. Only games that were never
+archived at all are omitted.
 
 ## Project layout
 
 ```
 scraper/
-  scrape.py          # the whole pipeline → writes site/data.json
+  scrape.py              # the whole pipeline → writes site/data.json
+  wayback_harvest.py     # one-off: rebuild wayback_articles.json from the Wayback Machine
+  wayback_articles.json  # archived printed-ticket counts for delisted games (committed)
   requirements.txt
 site/                # the deployable static site (no build step)
   index.html

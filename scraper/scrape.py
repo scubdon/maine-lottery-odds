@@ -38,6 +38,11 @@ BASE = "https://www.mainelottery.com"
 UNCLAIMED_URL = f"{BASE}/players_info/unclaimed_prizes.html"
 INDEX_URL = f"{BASE}/instant/index.html"
 OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "site", "data.json")
+# Recovered tickets-printed data for games whose maine.gov article page the
+# lottery has taken down. Read from the Wayback Machine (see wayback_harvest.py),
+# committed so the daily scrape can still show those games. The printed count
+# never changes, so an archived value stays valid as the live unsold % updates.
+WAYBACK_PATH = os.path.join(os.path.dirname(__file__), "wayback_articles.json")
 
 HEADERS = {
     "User-Agent": (
@@ -165,7 +170,7 @@ def parse_article(entry: dict) -> dict | None:
     text = re.sub(r"\s+", " ", BeautifulSoup(html, "html.parser").get_text(" "))
 
     gm = re.search(r"Game\s*#\s*(\d+)", text)
-    tp = re.search(r"Tickets\s+Printed\s*[:\-]?\s*([\d,]+)", text, re.IGNORECASE)
+    tp = re.search(r"Tickets?\s+Printed\s*[:\-]?\s*([\d,]+)", text, re.IGNORECASE)
     if not gm or not tp:
         return None
 
@@ -197,6 +202,14 @@ def fetch_articles(entries: list[dict]) -> dict[int, dict]:
     return out
 
 
+def load_wayback() -> dict[int, dict]:
+    """game_number -> archived article data, for games the lottery has delisted."""
+    if not os.path.exists(WAYBACK_PATH):
+        return {}
+    with open(WAYBACK_PATH, encoding="utf-8") as fh:
+        return {int(gn): art for gn, art in json.load(fh).items()}
+
+
 # --------------------------------------------------------------------------- #
 # Join + compute odds
 # --------------------------------------------------------------------------- #
@@ -213,11 +226,23 @@ def build() -> dict:
     articles = fetch_articles(listed)
     print(f"  {len(articles)} articles with tickets-printed", file=sys.stderr)
 
+    wayback = load_wayback()
+    print(f"  {len(wayback)} games available from archived pages", file=sys.stderr)
+
     games = []
+    archived_used = 0
     for gn, t in unclaimed.items():
         art = articles.get(gn)
+        source = "live"
+        if not art or not art.get("tickets_printed"):
+            # live page gone / unparsable — fall back to the archived copy
+            art = wayback.get(gn)
+            source = "archived"
         if not art or not art.get("tickets_printed"):
             continue  # can't compute odds without printed count -> skip
+
+        if source == "archived":
+            archived_used += 1
 
         printed = art["tickets_printed"]
         pct = t["percent_unsold"]
@@ -237,6 +262,10 @@ def build() -> dict:
             )
         prizes.sort(key=lambda p: p["prize"], reverse=True)
 
+        # archived games keep their live maine.gov URL in article_url but it now
+        # 404s, so point the public link at the working Wayback snapshot instead.
+        link = art.get("wayback_url") or art.get("article_url") if source == "archived" else art.get("article_url")
+
         games.append(
             {
                 "game_number": gn,
@@ -250,7 +279,9 @@ def build() -> dict:
                 "overall_odds": float(art["overall_odds"].replace(",", "")) if art.get("overall_odds") else None,
                 "on_sale": art.get("on_sale"),
                 "image_url": art.get("image_url"),
-                "article_url": art.get("article_url"),
+                "article_url": link,
+                "data_source": source,
+                "archived_at": art.get("wayback_timestamp") if source == "archived" else None,
                 "prizes": prizes,
             }
         )
@@ -266,6 +297,8 @@ def build() -> dict:
         "counts": {
             "in_unclaimed_table": len(unclaimed),
             "matched_with_printed": len(games),
+            "from_live_pages": len(games) - archived_used,
+            "from_archive": archived_used,
         },
         "games": games,
     }

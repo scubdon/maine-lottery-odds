@@ -5,9 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>The Real Odds — Maine Scratch Tickets</title>
   <meta name="description" content="The actual odds of winning a top prize on Maine State Lottery scratch tickets, calculated from prizes still unclaimed and tickets still unsold." />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -82,7 +79,9 @@
       <h2>How this is calculated</h2>
       <p>
         For each game we take the <strong>total number of tickets printed</strong> (from the game's own
-        page on the lottery site) and multiply by the <strong>percent of tickets still unsold</strong>
+        page on the lottery site, or — for games the lottery has since delisted — an
+        <a href="https://web.archive.org/" target="_blank" rel="noopener">archived copy of that page</a>)
+        and multiply by the <strong>percent of tickets still unsold</strong>
         (from the lottery's unclaimed-prizes table) to estimate how many tickets are still out there to buy.
         For every top prize level, we divide those remaining tickets by the number of that prize still
         unclaimed:
@@ -93,7 +92,8 @@
       <p class="caveat">
         These are estimates and assume the unsold tickets are distributed like the rest of the pool — which
         the lottery does not guarantee. "Unclaimed" prizes may already be sitting in someone's drawer.
-        Games whose individual page has been taken down by the lottery can't be matched and are not shown.
+        For games whose individual page the lottery has taken down, the printed-ticket count comes from an
+        archived copy of that page (marked on the card); a few games never archived still can't be shown.
         This site is not affiliated with or endorsed by the Maine State Lottery. Data:
         <a id="src-unclaimed" href="#">unclaimed prizes table</a> ·
         <a id="src-index" href="#">instant game index</a>.
@@ -112,6 +112,7 @@
           <h3 class="card-name"></h3>
           <span class="card-no"></span>
         </header>
+        <p class="src-note" hidden>Game page removed by the lottery — printed-ticket count recovered from an archived copy.</p>
         <dl class="card-meta">
           <div><dt>Tickets left</dt><dd class="m-left"></dd></div>
           <div><dt>Percent unsold</dt><dd class="m-unsold"></dd></div>

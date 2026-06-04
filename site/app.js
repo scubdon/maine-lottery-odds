@@ -36,10 +36,13 @@ async function init() {
 function hydrateChrome(data) {
   if (data.generated_at) {
     const d = new Date(data.generated_at);
-    $("#updated").textContent =
+    const archived = (data.counts && data.counts.from_archive) || 0;
+    let line =
       "Data refreshed " + d.toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric" }) +
       " · " + data.counts.matched_with_printed + " of " + data.counts.in_unclaimed_table +
-      " current games could be matched to a printed-ticket count.";
+      " current games matched to a printed-ticket count.";
+    if (archived) line += " " + archived + " of them use a page archived from the Wayback Machine.";
+    $("#updated").textContent = line;
   }
   if (data.source) {
     $("#src-unclaimed").href = data.source.unclaimed_prizes;
@@ -217,6 +220,10 @@ function buildCard(tpl, g) {
   node.querySelector(".price-badge").textContent = "$" + g.price;
   node.querySelector(".card-name").textContent = g.name;
   node.querySelector(".card-no").textContent = "Game #" + g.game_number;
+  if (g.data_source === "archived") {
+    node.querySelector(".src-note").hidden = false;
+    node.querySelector(".card").classList.add("is-archived");
+  }
   node.querySelector(".m-left").textContent = fmt(g.tickets_remaining);
   node.querySelector(".m-unsold").textContent = g.percent_unsold != null ? g.percent_unsold + "%" : "—";
   node.querySelector(".m-overall").textContent = g.overall_odds ? "1 in " + g.overall_odds : "—";
@@ -235,7 +242,10 @@ function buildCard(tpl, g) {
   }
 
   const link = node.querySelector(".card-link");
-  if (g.article_url) link.href = g.article_url; else link.remove();
+  if (g.article_url) {
+    link.href = g.article_url;
+    if (g.data_source === "archived") link.textContent = "View archived game page →";
+  } else link.remove();
   return node;
 }
 

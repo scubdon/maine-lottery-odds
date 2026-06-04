@@ -10,6 +10,8 @@
   --good: #2f6b46;
   --shadow: 0 1px 2px rgba(20, 16, 8, .06), 0 8px 24px rgba(20, 16, 8, .06);
   --radius: 14px;
+  /* San Francisco on Apple platforms, graceful fallbacks elsewhere */
+  --sans: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Segoe UI", system-ui, Roboto, sans-serif;
 }
 
 * { box-sizing: border-box; }
@@ -20,7 +22,7 @@ body {
   margin: 0;
   background: var(--paper);
   color: var(--ink);
-  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  font-family: var(--sans);
   font-size: 17px;
   line-height: 1.55;
   -webkit-font-smoothing: antialiased;
@@ -45,8 +47,8 @@ a { color: var(--warn); text-decoration-thickness: 1px; text-underline-offset: 2
   color: var(--accent); font-weight: 600; margin: 0 0 .9rem;
 }
 h1 {
-  font-family: "Fraunces", Georgia, serif;
-  font-weight: 900;
+  font-family: var(--sans);
+  font-weight: 800;
   font-size: clamp(2.6rem, 7vw, 5rem);
   line-height: .98;
   letter-spacing: -.02em;
@@ -70,7 +72,7 @@ h1 em { color: var(--warn); font-style: italic; }
 }
 .stat { background: var(--card); padding: 1.6rem 1.4rem; }
 .stat-num {
-  display: block; font-family: "Fraunces", serif; font-weight: 900;
+  display: block; font-family: var(--sans); font-weight: 800;
   font-size: clamp(1.8rem, 4vw, 2.8rem); line-height: 1; color: var(--warn);
   letter-spacing: -.01em; font-variant-numeric: tabular-nums;
 }
@@ -80,7 +82,7 @@ h1 em { color: var(--warn); font-style: italic; }
 /* ---------- section chrome ---------- */
 section.wrap { margin-top: 3.5rem; }
 h2 {
-  font-family: "Fraunces", serif; font-weight: 600; letter-spacing: -.01em;
+  font-family: var(--sans); font-weight: 700; letter-spacing: -.01em;
   font-size: clamp(1.5rem, 3.5vw, 2.1rem); margin: 0 0 .5rem;
 }
 .section-note { color: var(--ink-soft); max-width: 64ch; margin: 0 0 1.5rem; }
@@ -92,7 +94,7 @@ h2 {
 .dot { cursor: pointer; transition: r .12s ease, opacity .12s ease; }
 .dot:hover { opacity: 1 !important; }
 .axis-line { stroke: var(--line); stroke-width: 1; }
-.tick text { fill: var(--ink-soft); font-size: 12px; font-family: "Inter", sans-serif; }
+.tick text { fill: var(--ink-soft); font-size: 12px; font-family: var(--sans); }
 .tick .grid { stroke: var(--line); stroke-dasharray: 2 4; }
 .ref text { fill: var(--ink-soft); font-size: 11px; font-style: italic; }
 .ref line { stroke: var(--accent); stroke-width: 1; stroke-dasharray: 3 3; opacity: .6; }
@@ -155,10 +157,17 @@ h2 {
 .card-body { padding: 1.2rem 1.3rem 1.3rem; display: flex; flex-direction: column; flex: 1; }
 .card-head { display: flex; justify-content: space-between; align-items: baseline; gap: .6rem; }
 .card-name {
-  font-family: "Fraunces", serif; font-weight: 600; font-size: 1.25rem;
+  font-family: var(--sans); font-weight: 700; font-size: 1.25rem;
   margin: 0; line-height: 1.1; letter-spacing: -.01em;
 }
 .card-no { font-size: .78rem; color: var(--ink-soft); white-space: nowrap; }
+
+.card.is-archived { border-color: #d8c9a3; }
+.src-note {
+  margin: .55rem 0 0; padding: .4rem .6rem;
+  background: #faf3e1; border: 1px solid #e6d6ad; border-radius: 6px;
+  font-size: .74rem; line-height: 1.35; color: #7a6534;
+}
 
 .card-meta { display: grid; grid-template-columns: repeat(3, 1fr); gap: .5rem; margin: 1rem 0 1.1rem; }
 .card-meta div { border-top: 1px solid var(--line); padding-top: .5rem; }
@@ -185,7 +194,7 @@ h2 {
 .colophon p { max-width: 70ch; color: var(--ink-soft); }
 .colophon strong { color: var(--ink); }
 .formula {
-  font-family: "Fraunces", serif; font-style: italic; color: var(--ink) !important;
+  font-family: var(--sans); font-style: italic; color: var(--ink) !important;
   font-size: 1.1rem; padding: 1rem 1.2rem; background: var(--card);
   border-left: 3px solid var(--accent); border-radius: 0 8px 8px 0;
 }
