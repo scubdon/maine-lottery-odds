@@ -13,7 +13,7 @@ on:
   workflow_dispatch:
 
 permissions:
-  contents: read
+  contents: write   # commit newly cached ticket images back to the repo
   pages: write
   id-token: write
 
@@ -39,6 +39,20 @@ jobs:
 
       - name: Scrape latest lottery data
         run: python scraper/scrape.py
+
+      # Persist any images downloaded this run so they outlive the source.
+      # [skip ci] keeps this commit from re-triggering the workflow.
+      - name: Commit newly cached ticket images
+        run: |
+          git add site/images
+          if git diff --cached --quiet; then
+            echo "No new images to commit."
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git commit -m "Cache new ticket images [skip ci]"
+            git push origin HEAD:main
+          fi
 
       - name: Upload site artifact
         uses: actions/upload-pages-artifact@v5

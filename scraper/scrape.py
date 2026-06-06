@@ -38,6 +38,20 @@ BASE = "https://www.mainelottery.com"
 UNCLAIMED_URL = f"{BASE}/players_info/unclaimed_prizes.html"
 INDEX_URL = f"{BASE}/instant/index.html"
 OUT_PATH = os.path.join(os.path.dirname(__file__), "..", "site", "data.json")
+# Ticket images are cached here (one file per game, named by game number) and
+# committed to the repo, so a copy survives after the lottery deletes the live
+# image, and images added by hand for delisted/Wayback games stay on the site.
+IMAGES_DIR = os.path.join(os.path.dirname(__file__), "..", "site", "images")
+IMAGE_REL = "images"  # path to that folder within the published site
+IMAGE_EXTS = ("png", "jpg", "jpeg", "gif", "webp", "avif")
+CONTENT_TYPE_EXT = {
+    "image/png": "png",
+    "image/jpeg": "jpg",
+    "image/jpg": "jpg",
+    "image/gif": "gif",
+    "image/webp": "webp",
+    "image/avif": "avif",
+}
 # Recovered tickets-printed data for games whose maine.gov article page the
 # lottery has taken down. Read from the Wayback Machine (see wayback_harvest.py),
 # committed so the daily scrape can still show those games. The printed count
@@ -75,6 +89,47 @@ def money_to_int(text: str) -> int | None:
     if not m:
         return None
     return int(m.group(1).replace(",", ""))
+
+
+# --------------------------------------------------------------------------- #
+# Ticket-image caching
+# --------------------------------------------------------------------------- #
+def cached_image_path(game_number: int) -> str | None:
+    """Site-relative path if game already has an image in site/images/, else None."""
+    for ext in IMAGE_EXTS:
+        if os.path.exists(os.path.join(IMAGES_DIR, f"{game_number}.{ext}")):
+            return f"{IMAGE_REL}/{game_number}.{ext}"
+    return None
+
+
+def cache_image(game_number: int, image_url: str | None) -> str | None:
+    """Return a site-relative path to a locally stored image for this game.
+
+    Preference order:
+      1. A file already in site/images/ — a previous download or one added by
+         hand. Never re-downloaded or overwritten, so manual images and copies
+         of since-deleted tickets persist.
+      2. A fresh download of image_url, saved under site/images/.
+      3. None — caller falls back to the remote URL (or shows no image).
+    """
+    local = cached_image_path(game_number)
+    if local:
+        return local
+    if not image_url:
+        return None
+    try:
+        r = session.get(image_url, timeout=30)
+        r.raise_for_status()
+    except Exception as exc:  # noqa: BLE001
+        print(f"  ! image fetch failed for game {game_number}: {exc}", file=sys.stderr)
+        return None
+    ctype = r.headers.get("Content-Type", "").split(";")[0].strip().lower()
+    ext = CONTENT_TYPE_EXT.get(ctype, "png")
+    os.makedirs(IMAGES_DIR, exist_ok=True)
+    with open(os.path.join(IMAGES_DIR, f"{game_number}.{ext}"), "wb") as fh:
+        fh.write(r.content)
+    print(f"  + cached image for game {game_number} ({game_number}.{ext})", file=sys.stderr)
+    return f"{IMAGE_REL}/{game_number}.{ext}"
 
 
 # --------------------------------------------------------------------------- #
@@ -266,6 +321,10 @@ def build() -> dict:
         # 404s, so point the public link at the working Wayback snapshot instead.
         link = art.get("wayback_url") or art.get("article_url") if source == "archived" else art.get("article_url")
 
+        # Prefer a locally cached copy (persists after the lottery deletes it);
+        # fall back to the live URL if we couldn't cache one this run.
+        image = cache_image(gn, art.get("image_url")) or art.get("image_url")
+
         games.append(
             {
                 "game_number": gn,
@@ -278,7 +337,7 @@ def build() -> dict:
                 "max_award": art.get("max_award"),
                 "overall_odds": float(art["overall_odds"].replace(",", "")) if art.get("overall_odds") else None,
                 "on_sale": art.get("on_sale"),
-                "image_url": art.get("image_url"),
+                "image_url": image,
                 "article_url": link,
                 "data_source": source,
                 "archived_at": art.get("wayback_timestamp") if source == "archived" else None,

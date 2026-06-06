@@ -1,5 +1,7 @@
 # The Real Odds — Maine Scratch Tickets
 
+Created because Maine doesn't include this information on the lottery site. j
+
 A small, self-updating website that shows the **actual odds of winning a top prize**
 on Maine State Lottery scratch tickets — the number the lottery doesn't print on the
 ticket. It's calculated from the prizes still unclaimed and the tickets still unsold.
@@ -38,6 +40,23 @@ from an **archived copy of that page on the [Wayback Machine](https://web.archiv
 keeps updating). Those games are marked "archived" on the site. Only games that were never
 archived at all are omitted.
 
+## Ticket images
+
+Ticket images are **cached into `site/images/`** (one file per game, named by game number,
+e.g. `718.jpg`) and committed to the repo. The scraper downloads each live image once and
+never overwrites it, so:
+
+- a cached copy stays on the site after the lottery deletes the original (which happens when
+  a game is archived), and
+- you can **add an image by hand** for a game that has none — just drop a file named after the
+  game number into `site/images/` (e.g. `site/images/655.png`). The scraper leaves it alone and
+  the site picks it up. This is how the Wayback-recovered games, which have no image upstream,
+  get pictures.
+
+`data.json` points each game at its local `images/<n>.jpg` when one exists, falling back to the
+live URL only if a download failed that run. The daily workflow commits any newly cached images
+back to `main` (with `[skip ci]`), so the cache grows automatically.
+
 ## Project layout
 
 ```
@@ -51,6 +70,7 @@ site/                # the deployable static site (no build step)
   styles.css
   app.js
   data.json          # generated; committed so the site works before the first CI run
+  images/            # cached ticket images, one per game (committed); add your own here
 .github/workflows/
   update.yml         # daily scrape + deploy to GitHub Pages
 ```
